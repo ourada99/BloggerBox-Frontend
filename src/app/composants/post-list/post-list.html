@@ -1,1 +1,17 @@
-<p>post-list works!</p>
+@if (posts$ | async; as posts) {
+  @if (posts.length) {
+    <h2>Blog Posts</h2>
+    <ul>
+      @for (post of posts; track $index) {
+        <li>
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.content }}</p>
+          <p>{{ post.createdDate }}</p>
+          <p>{{ post.category.name }}</p>
+        </li>
+      }
+    </ul>
+  }
+} @else {
+  <p>No posts available.</p>
+}
