@@ -6,12 +6,14 @@ import { App } from './app';
 import { TopBar } from './components/top-bar/top-bar';
 import { provideHttpClient } from '@angular/common/http';
 import { PostList } from './composants/post-list/post-list';
+import { PostListItem } from './components/post-list-item/post-list-item';
 
 @NgModule({
   declarations: [
     App,
     TopBar,
-    PostList
+    PostList,
+    PostListItem
   ],
   imports: [
     BrowserModule,
