@@ -1,6 +1,6 @@
 @if (posts$ | async; as posts) {
   @if (posts.length) {
-    @for (post of posts; track $index) {
+    @for (post of posts; track post.id) {
       <app-post-list-item [post]="post"></app-post-list-item>
     }
   }
